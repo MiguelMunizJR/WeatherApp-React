@@ -58,13 +58,16 @@ const CardWeather = ({
       </article>
       <article className="info">
         <div className="toggle__switch">
-          <h4 className="toggle">°C</h4>
+          <h4 className="toggle">&#176;C</h4>
           <input type="checkbox" id="switch" onClick={toggleTemp} />
           <label htmlFor="switch">Toggle</label>
-          <h4 className="toggle">°F</h4>
+          <h4 className="toggle">&#176;F</h4>
         </div>
         <h3 className="info__title">{weather?.weather[0].main}</h3>
         <h4 className="info__subtitle">{weather?.weather[0].description}</h4>
+        <footer>
+          <h5 className="footer">Miguel Muñiz &#169;</h5>
+        </footer>
       </article>
     </section>
   );

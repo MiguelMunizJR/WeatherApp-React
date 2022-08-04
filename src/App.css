@@ -13,7 +13,7 @@
   background-image: url("./assets/img/cloud-background.png");
   background-size: 45rem 22rem;
   background-position: 0rem 6rem;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .App {
@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   /* background-image: linear-gradient(
     to right bottom,
     #246ac4,
@@ -50,13 +50,14 @@
 
 .location__title {
   margin-top: 3.2rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
 }
 
 .location__date {
+  margin-top: .3rem;
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .weather {
@@ -84,7 +85,7 @@
 }
 
 .weather__maxmin {
-  width: 25%;
+  width: 9rem;
   display: flex;
   justify-content: space-between;
   color: #ffffffb2;
@@ -95,12 +96,12 @@
 }
 
 .maxmin__temp {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 300;
 }
 
 .maxmin span {
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   font-weight: 400;
 }
 
@@ -152,7 +153,7 @@
 }
 
 .toggle {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 300;
 }
 
@@ -196,12 +197,12 @@ input:checked + label:after {
 
 .info__title {
   margin-top: 8rem;
-  font-size: 3.8rem;
-  font-weight: 400;
+  font-size: 4rem;
+  font-weight: 600;
 }
 
 .info__subtitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -214,7 +215,7 @@ input:checked + label:after {
   color: #f2f2f2;
   background-color: #3f3f3f81;
   border-radius: 1.3rem;
-  z-index: 10;
+  z-index: 100;
 }
 
 .card {
@@ -228,7 +229,7 @@ input:checked + label:after {
 .card__title {
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .card__icon {
@@ -238,5 +239,16 @@ input:checked + label:after {
 
 .card__span {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+.footer {
+  padding: .1rem;
+  position: absolute;
+  top: 37rem;
+  left: 47vw;
+  font-size: .9rem;
+  font-weight: 200;
+  background-color: #3f3f3f31;
+  border-radius: .5rem;
 }

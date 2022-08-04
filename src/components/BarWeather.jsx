@@ -31,45 +31,6 @@ const BarWeather = ({ weather, temp, isCelsius }) => {
   return (
     <div className="bar">
       <article className="card">
-        <h5 className="card__title wind__title">Wind speed</h5>
-        <h3 className="card__icon wind__icon">
-          <i className="fa-solid fa-location-arrow"></i>
-        </h3>
-        <h4 className="wind__speed">
-          <span className="card__span">{weather?.wind.speed}</span> M/S
-        </h4>
-        <h4 className="wind__direction">
-          <span className="card__span">{degrees}</span>°
-        </h4>
-      </article>
-      <article className="card">
-        <h5 className="card__title clouds__title">% Clouds</h5>
-        <h3 className="card__icon clouds__icon">
-          <i className="fa-solid fa-cloud"></i>
-        </h3>
-        <h4 className="clouds__info">
-          <span className="card__span">{weather?.clouds.all}</span> %
-        </h4>
-      </article>
-      <article className="card">
-        <h5 className="card__title humidity__title">% Humidity</h5>
-        <h3 className="card__icon humidity__icon">
-          <i className="fa-solid fa-droplet"></i>
-        </h3>
-        <h4 className="humidity__info">
-          <span className="card__span">{weather?.main.humidity}</span> %
-        </h4>
-      </article>
-      <article className="card">
-        <h5 className="card__title pressure__title">Pressure</h5>
-        <h3 className="card__icon pressure__icon">
-          <i className="fa-solid fa-arrows-down-to-line"></i>
-        </h3>
-        <h4 className="pressure__info">
-          <span className="card__span">{weather?.main.pressure}</span> hPa
-        </h4>
-      </article>
-      <article className="card">
         <h5 className="card__title feels__title">Apparent temperature</h5>
         <h3 className="card__icon feels__icon">
           <i className="fa-solid fa-temperature-half"></i>
@@ -79,6 +40,45 @@ const BarWeather = ({ weather, temp, isCelsius }) => {
             {isCelsius ? temp?.celsiusFeels : temp?.farenheitFeels}
           </span>
           {isCelsius ? "°C" : "°F"}
+        </h4>
+      </article>
+      <article className="card">
+        <h5 className="card__title clouds__title">&#37; Clouds</h5>
+        <h3 className="card__icon clouds__icon">
+          <i className="fa-solid fa-cloud"></i>
+        </h3>
+        <h4 className="clouds__info">
+          <span className="card__span">{weather?.clouds.all}</span> &#37;
+        </h4>
+      </article>
+      <article className="card">
+        <h5 className="card__title wind__title">Wind speed</h5>
+        <h3 className="card__icon wind__icon">
+          <i className="fa-solid fa-location-arrow"></i>
+        </h3>
+        <h4 className="wind__speed">
+          <span className="card__span">{weather?.wind.speed}</span> m/s
+        </h4>
+        <h4 className="wind__direction">
+          <span className="card__span">{degrees}</span>&#176;
+        </h4>
+      </article>
+      <article className="card">
+        <h5 className="card__title humidity__title">&#37; Humidity</h5>
+        <h3 className="card__icon humidity__icon">
+          <i className="fa-solid fa-droplet"></i>
+        </h3>
+        <h4 className="humidity__info">
+          <span className="card__span">{weather?.main.humidity}</span> &#37;
+        </h4>
+      </article>
+      <article className="card">
+        <h5 className="card__title pressure__title">Atmospheric pressure</h5>
+        <h3 className="card__icon pressure__icon">
+          <i className="fa-solid fa-arrows-down-to-line"></i>
+        </h3>
+        <h4 className="pressure__info">
+          <span className="card__span">{weather?.main.pressure}</span> hPa
         </h4>
       </article>
     </div>
