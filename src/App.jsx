@@ -21,7 +21,7 @@ const bgnApp = [
 function App() {
   const [coord, setCoord] = useState();
   const [weather, setWeather] = useState();
-  const [isCelsius, setIsCelsius] = useState(true);
+  const [isCelsius, setIsCelsius] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [date, setDate] = useState();
   const [timeBgn, setTimeBgn] = useState();
@@ -45,6 +45,7 @@ function App() {
         .get(URL)
         .then((res) => {
           setWeather(res.data);
+          setIsCelsius(true);
           setIsLoading(false);
         })
         .catch((err) => console.log(err.data));
