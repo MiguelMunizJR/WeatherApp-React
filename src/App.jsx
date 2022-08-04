@@ -89,7 +89,11 @@ function App() {
           isLoading={isLoading}
           setIsLoading={setIsLoading}
         />
-        <BarWeather weather={weather} temp={temp} isCelsius={isCelsius} />
+        <BarWeather
+          weather={weather}
+          temp={temp} 
+          isCelsius={isCelsius} 
+        />
       </div>
     );
   }
