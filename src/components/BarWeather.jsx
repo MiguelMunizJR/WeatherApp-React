@@ -5,7 +5,7 @@ const BarWeather = ({ weather, temp, isCelsius }) => {
 
   useEffect(() => {
     setDegrees(weather?.wind.deg);
-
+    
     // Conversion de grados cardinales a rosa de los vientos(North, South, East, West)
     if (degrees >= 0 && degrees < 25) {
       setDegrees("N");

@@ -24,14 +24,6 @@
   flex-direction: column;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
-  /* background-image: linear-gradient(
-    to right bottom,
-    #246ac4,
-    #028ad1,
-    #39a7d6,
-    #6fc1da,
-    #a3dae0
-  ); */
 }
 
 .container {
@@ -251,4 +243,31 @@ input:checked + label:after {
   font-weight: 200;
   background-color: #3f3f3f31;
   border-radius: .5rem;
+}
+
+.loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eff3f7;
+}
+
+.loading__circle {
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 0, 0, .3);
+  border-top-color: transparent;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -1,18 +1,10 @@
-const CardWeather = ({
-  weather,
-  temp,
-  date,
-  isCelsius,
-  setIsCelsius,
-  isLoading,
-  setIsLoading,
-}) => {
+const CardWeather = ({ weather, temp, date, isCelsius, setIsCelsius }) => {
   const toggleTemp = () => {
     setIsCelsius(!isCelsius);
   };
 
   const refresh = () => {
-    setIsLoading(!isLoading);
+    location.reload();
   };
 
   return (
@@ -38,16 +30,16 @@ const CardWeather = ({
         </h2>
         <div className="weather__maxmin">
           <div className="maxmin">
-            <h4 className="maxmin__title">Max</h4>
+            <h4 className="maxmin__title">Min</h4>
             <h4 className="maxmin__temp">
-              <span>{isCelsius ? temp?.celsiusMax : temp?.farenheitMax}</span>
+              <span>{isCelsius ? temp?.celsiusMin : temp?.farenheitMin}</span>
               {isCelsius ? "°C" : "°F"}
             </h4>
           </div>
           <div className="maxmin">
-            <h4 className="maxmin__title">Min</h4>
+            <h4 className="maxmin__title">Max</h4>
             <h4 className="maxmin__temp">
-              <span>{isCelsius ? temp?.celsiusMin : temp?.farenheitMin}</span>
+              <span>{isCelsius ? temp?.celsiusMax : temp?.farenheitMax}</span>
               {isCelsius ? "°C" : "°F"}
             </h4>
           </div>
