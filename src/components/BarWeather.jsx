@@ -57,7 +57,7 @@ const BarWeather = ({ weather, temp, isCelsius }) => {
           <i className="fa-solid fa-location-arrow"></i>
         </h3>
         <h4 className="wind__speed">
-          <span className="card__span">{weather?.wind.speed}</span> m/s
+          <span className="card__span">{weather?.wind.speed.toFixed(1)}</span> m/s
         </h4>
         <h4 className="wind__direction">
           <span className="card__span">{degrees}</span>&#176;
