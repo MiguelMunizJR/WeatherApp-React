@@ -51,7 +51,7 @@ function App() {
 
   // Funcion de loading con timeout
   const loadingTimeout = () => {
-    intervalLoading = window.setTimeout(changeLoading, 1500);
+    intervalLoading = window.setTimeout(changeLoading, 1000);
   };
 
   // Termina loading
@@ -105,17 +105,18 @@ function App() {
   };
 
   //Convertir Kelvins a Celsius y Farenheit
+  const tempCelsius = weather?.main.temp - 273.15;
+  const tempFarenheit = tempCelsius * 1.8 + 32;
+
   const temp = {
-    celsius: Math.round(weather?.main.temp - 273.15),
-    celsiusFeels: Math.floor(weather?.main.feels_like - 273.15),
-    celsiusMax: Math.round(weather?.main.temp_max - 273.15),
-    celsiusMin: Math.floor(weather?.main.temp_min - 273.15),
-    farenheit: Math.round(((weather?.main.temp - 273.15) * 9) / 5 + 3),
-    farenheitFeels: Math.floor(
-      ((weather?.main.feels_like - 273.15) * 9) / 5 + 3
-    ),
-    farenheitMax: Math.round(((weather?.main.temp_max - 273.15) * 9) / 5 + 3),
-    farenheitMin: Math.floor(((weather?.main.temp_min - 273.15) * 9) / 5 + 3),
+    celsius: Math.floor(tempCelsius),
+    celsiusFeels: Math.floor(tempCelsius),
+    celsiusMax: Math.round(tempCelsius),
+    celsiusMin: Math.floor(tempCelsius),
+    farenheit: Math.floor(tempFarenheit),
+    farenheitFeels: Math.round(tempFarenheit),
+    farenheitMax: Math.round(tempFarenheit),
+    farenheitMin: Math.floor(tempFarenheit),
   };
 
   if (isLoading) {

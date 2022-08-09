@@ -13,7 +13,7 @@
   background-image: url("./assets/img/cloud-background.png");
   background-size: 45rem 22rem;
   background-position: 0rem 6rem;
-  opacity: 0.2;
+  opacity: 0.3;
 }
 
 .App {
@@ -179,7 +179,7 @@ label:after {
 }
 
 input:checked + label {
-  background: #6aa6df;
+  background: #133b61;
 }
 
 input:checked + label:after {
