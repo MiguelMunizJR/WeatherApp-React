@@ -109,7 +109,7 @@ function App() {
   const tempFarenheit = ((weather?.main.temp - 273.15) * 9) / 5 + 32;
 
   const temp = {
-    celsius: Math.round(tempCelsius),
+    celsius: Math.floor(tempCelsius),
     celsiusFeels: tempCelsius.toFixed(1),
     celsiusMax: Math.ceil(tempCelsius),
     celsiusMin: Math.floor(tempCelsius),
