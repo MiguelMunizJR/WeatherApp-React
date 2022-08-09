@@ -106,16 +106,16 @@ function App() {
 
   //Convertir Kelvins a Celsius y Farenheit
   const tempCelsius = weather?.main.temp - 273.15;
-  const tempFarenheit = tempCelsius * 1.8 + 32;
+  const tempFarenheit = ((weather?.main.temp - 273.15) * 9) / 5 + 32;
 
   const temp = {
-    celsius: Math.floor(tempCelsius),
-    celsiusFeels: Math.floor(tempCelsius),
-    celsiusMax: Math.round(tempCelsius),
+    celsius: Math.round(tempCelsius),
+    celsiusFeels: tempCelsius.toFixed(1),
+    celsiusMax: Math.ceil(tempCelsius),
     celsiusMin: Math.floor(tempCelsius),
     farenheit: Math.floor(tempFarenheit),
-    farenheitFeels: Math.round(tempFarenheit),
-    farenheitMax: Math.round(tempFarenheit),
+    farenheitFeels: tempFarenheit.toFixed(1),
+    farenheitMax: Math.ceil(tempFarenheit),
     farenheitMin: Math.floor(tempFarenheit),
   };
 
