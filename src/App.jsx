@@ -115,7 +115,7 @@ function App() {
   const temp = {
     celsius: Math.floor(tempCelsius),
     celsiusFeels: tempFeelsCelsius.toFixed(1),
-    celsiusMax: Math.round(tempCelsius),
+    celsiusMax: Math.ceil(tempCelsius),
     celsiusMin: Math.floor(tempCelsius),
     farenheit: Math.floor(tempFarenheit),
     farenheitFeels: tempFeelsFarenheit.toFixed(1),
