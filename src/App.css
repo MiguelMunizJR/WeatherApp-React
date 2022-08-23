@@ -479,7 +479,7 @@ input:checked + label:after {
   }
 
   .toggle__switch {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     top: -1rem;
     width: 8rem;
   }
