@@ -479,9 +479,10 @@ input:checked + label:after {
   }
 
   .toggle__switch {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     top: -1rem;
     width: 8rem;
+    height: 2.5rem;
   }
 
   .toggle {
