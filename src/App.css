@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -48,7 +48,7 @@
 }
 
 .location__date {
-  margin-top: .3rem;
+  margin-top: 0.3rem;
   font-size: 1.3rem;
   font-weight: 200;
 }
@@ -246,15 +246,15 @@ input:checked + label:after {
 }
 
 .footer {
-  padding: .1rem;
+  padding: 0.1rem;
   position: absolute;
   top: 37rem;
   left: 47vw;
   display: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 200;
   background-color: #3f3f3f31;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .loading {
@@ -269,7 +269,7 @@ input:checked + label:after {
   width: 3rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 4px solid rgba(0, 0, 0, .3);
+  border: 4px solid rgba(0, 0, 0, 0.3);
   border-top-color: transparent;
 
   animation: spin 1s linear infinite;
@@ -277,7 +277,6 @@ input:checked + label:after {
 
 /* MEDIAQUERIES (Width: 320px) */
 @media screen and (max-width: 1024px) {
-
   .App {
     width: 100vw;
     height: 100vh;
@@ -286,10 +285,10 @@ input:checked + label:after {
   .App::before {
     background-size: 25rem;
     background-position: 0rem 3rem;
-    opacity: .2;
+    opacity: 0.2;
     animation: bgnMove 100s linear infinite;
   }
-  
+
   .container {
     width: 100vw;
     height: 100vh;
@@ -307,7 +306,7 @@ input:checked + label:after {
     position: absolute;
     top: 2rem;
     left: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .location__date {
@@ -327,7 +326,7 @@ input:checked + label:after {
     border-radius: 30%;
     z-index: 100;
   }
-  
+
   .menu__mobile {
     display: flex;
     position: absolute;
@@ -346,7 +345,7 @@ input:checked + label:after {
     border-radius: 0;
     flex-direction: column;
     align-items: flex-end;
-    background-color: #3f3f3fc2;
+    background-color: #3f3f3fa8;
   }
 
   .fa-xmark {
@@ -357,15 +356,15 @@ input:checked + label:after {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: .5rem;
-    left: .3rem;
+    top: 0.5rem;
+    left: 0.3rem;
     font-size: 1.5rem;
     cursor: pointer;
     background-color: #3f3f3f6c;
   }
 
   .card__title {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .card__icon {
@@ -377,7 +376,7 @@ input:checked + label:after {
   }
 
   .weather {
-    margin-top: 4.5rem;
+    margin-top: 4rem;
   }
 
   .weather__temp {
@@ -394,7 +393,7 @@ input:checked + label:after {
     justify-content: space-evenly;
   }
 
-  .weather__maxmin span{
+  .weather__maxmin span {
     font-size: 1.2rem;
   }
 
@@ -405,7 +404,7 @@ input:checked + label:after {
     width: 7rem;
     height: 2.2rem;
     position: relative;
-    top: -.5rem;
+    top: -0.5rem;
     left: 14%;
     z-index: 100;
   }
@@ -435,6 +434,79 @@ input:checked + label:after {
 }
 /* MEDIAQUERIES (Width: 375px) */
 @media screen and (min-width: 375px) {
+  .bar {
+    align-items: center;
+  }
+
+  .fa-xmark {
+    top: 0.8rem;
+    left: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .location__title {
+    font-size: 1.5rem;
+  }
+
+  .location__date {
+    top: 3.7rem;
+    font-size: 1.2rem;
+  }
+
+  .menu__mobile {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+  }
+
+  .refresh__btn {
+    right: 4.8rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+  }
+
+  .weather__temp span {
+    font-size: 6rem;
+  }
+
+  .weather__maxmin {
+    width: 10rem;
+  }
+
+  .weather__maxmin span {
+    font-size: 1.8rem;
+  }
+
+  .toggle__switch {
+    margin-bottom: 1rem;
+    top: -1rem;
+    width: 8rem;
+  }
+
+  .toggle {
+    font-size: 1.5rem;
+  }
+
+  .info__title {
+    font-size: 3rem;
+  }
+
+  .info__subtitle {
+    font-size: 1.5rem;
+  }
+}
+/* MEDIAQUERIES (Width: 425px) */
+@media screen and (min-width: 425px) {
+  .fa-xmark {
+    font-size: 1.2rem;
+  }
+}
+/* MEDIAQUERIES (Width: 560px) */
+@media screen and (min-width: 560px) {
+  .App::before {
+    background-size: 28rem;
+  }
 
   .bar {
     width: 40vw;
@@ -444,40 +516,12 @@ input:checked + label:after {
     font-size: 1.2rem;
   }
 }
-/* MEDIAQUERIES (Width: 425px) */
-@media screen and (min-width: 425px) {
-
-  .bar {
-    width: 45vw;
-    align-items: center;
-  }
-
-  .fa-xmark {
-    font-size: 1.2rem;
-  }
-}
-/* MEDIAQUERIES (Width: 560px) */
-@media screen and (min-width: 560px) {
-
-  .App::before {
-    background-size: 28rem;
-  }
-
-  .bar {
-    width: 38vw;
-  }
-
-  .fa-xmark {
-    font-size: 1.2rem;
-  }
-}
 /* MEDIAQUERIES (Width: 768px) */
 @media screen and (min-width: 768px) {
-
   .App::before {
     background-size: 30rem;
   }
-  
+
   .location__title {
     font-size: 1.8rem;
     left: 4rem;
@@ -501,13 +545,8 @@ input:checked + label:after {
     right: 4rem;
   }
 
-  .bar {
-    width: 30vw;
-    align-items: center;
-  }
-
   .fa-xmark {
-    left: .6rem;
+    left: 0.6rem;
     font-size: 1.8rem;
   }
 
@@ -555,7 +594,6 @@ input:checked + label:after {
 }
 
 @media screen and (min-width: 1025px) {
-  
   .App::before {
     background-size: 35rem;
   }
