@@ -1,4 +1,11 @@
-const CardWeather = ({ weather, temp, date, isCelsius, setIsCelsius }) => {
+const CardWeather = ({
+  weather,
+  temp,
+  date,
+  isCelsius,
+  setIsCelsius,
+  menuMobile,
+}) => {
   const toggleTemp = () => {
     setIsCelsius(!isCelsius);
   };
@@ -16,6 +23,9 @@ const CardWeather = ({ weather, temp, date, isCelsius, setIsCelsius }) => {
         </h2>
         <h3 className="location__date">{date?.toDateString()}</h3>
       </article>
+      <div className="menu__mobile" onClick={menuMobile}>
+        <i className="fa-solid fa-bars"></i>
+      </div>
       <article className="weather">
         <div className="weather__img">
           <img
@@ -57,9 +67,6 @@ const CardWeather = ({ weather, temp, date, isCelsius, setIsCelsius }) => {
         </div>
         <h3 className="info__title">{weather?.weather[0].main}</h3>
         <h4 className="info__subtitle">{weather?.weather[0].description}</h4>
-        <footer>
-          <h5 className="footer">Miguel Muñiz &#169;</h5>
-        </footer>
       </article>
     </section>
   );
