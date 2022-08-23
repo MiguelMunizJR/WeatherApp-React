@@ -13,13 +13,13 @@
   background-image: url("./assets/img/cloud-background.png");
   background-size: 45rem 22rem;
   background-position: 0rem 6rem;
-  opacity: 0.3;
+  opacity: 0.2;
   animation: bgnMove 100s linear infinite;
 }
 
 .App {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -211,7 +211,7 @@ input:checked + label:after {
 
 .bar {
   margin: 0 auto 2rem;
-  width: 55vw;
+  width: 60vw;
   height: 10rem;
   display: none;
   justify-content: space-evenly;
@@ -245,18 +245,6 @@ input:checked + label:after {
   font-weight: 400;
 }
 
-.footer {
-  padding: 0.1rem;
-  position: absolute;
-  top: 37rem;
-  left: 47vw;
-  display: none;
-  font-size: 0.9rem;
-  font-weight: 200;
-  background-color: #3f3f3f31;
-  border-radius: 0.5rem;
-}
-
 .loading {
   height: 100vh;
   display: flex;
@@ -283,8 +271,7 @@ input:checked + label:after {
   }
 
   .App::before {
-    background-size: 25rem;
-    background-position: 0rem 3rem;
+    background-size: 22rem;
     opacity: 0.2;
     animation: bgnMove 100s linear infinite;
   }
@@ -459,6 +446,18 @@ input:checked + label:after {
     font-size: 1.3rem;
   }
 
+  .card__title {
+    font-size: 1rem;
+  }
+
+  .card__icon {
+    font-size: 1.5rem;
+  }
+
+  .card__span {
+    font-size: 1.1rem;
+  }
+
   .refresh__btn {
     right: 4.8rem;
     width: 2.5rem;
@@ -480,7 +479,9 @@ input:checked + label:after {
 
   .toggle__switch {
     margin-bottom: 4rem;
+    padding: 0.1rem;
     top: -1rem;
+    left: 17%;
     width: 8rem;
     height: 2.5rem;
   }
@@ -506,11 +507,11 @@ input:checked + label:after {
 /* MEDIAQUERIES (Width: 560px) */
 @media screen and (min-width: 560px) {
   .App::before {
-    background-size: 28rem;
+    background-size: 25rem;
   }
 
   .bar {
-    width: 40vw;
+    width: 50vw;
   }
 
   .fa-xmark {
@@ -530,7 +531,7 @@ input:checked + label:after {
 
   .location__date {
     font-size: 1.3rem;
-    top: 3.3rem;
+    top: 4rem;
     left: 8.5rem;
   }
 
@@ -563,12 +564,12 @@ input:checked + label:after {
     font-size: 1rem;
   }
 
-  .weather__temp span {
-    font-size: 7rem;
+  .weather {
+    margin-top: 10rem;
   }
 
-  .weather__maxmin {
-    width: 12rem;
+  .weather__temp span {
+    font-size: 7rem;
   }
 
   .weather__maxmin span {
@@ -578,7 +579,7 @@ input:checked + label:after {
   .toggle__switch {
     width: 8rem;
     height: 2.5rem;
-    left: 27.5%;
+    left: 24.3%;
   }
 
   .toggle {
@@ -595,8 +596,8 @@ input:checked + label:after {
 }
 
 @media screen and (min-width: 1025px) {
-  .App::before {
-    background-size: 35rem;
+  .weather {
+    margin: 0;
   }
 
   .menu__mobile {
@@ -609,6 +610,18 @@ input:checked + label:after {
 
   .fa-xmark {
     display: none;
+  }
+
+  label::after {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 70vw;
+    height: 70vh;
   }
 }
 
@@ -625,10 +638,10 @@ input:checked + label:after {
 /* Background clouds */
 @keyframes bgnMove {
   0% {
-    background-position: 0rem 0rem;
+    background-position: 0;
   }
 
   100% {
-    background-position: 30rem 0rem;
+    background-position: 100vw;
   }
 }

@@ -67,9 +67,6 @@ const CardWeather = ({
         </div>
         <h3 className="info__title">{weather?.weather[0].main}</h3>
         <h4 className="info__subtitle">{weather?.weather[0].description}</h4>
-        <footer>
-          <h5 className="footer">Miguel Muñiz &#169;</h5>
-        </footer>
       </article>
     </section>
   );
