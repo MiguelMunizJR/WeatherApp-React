@@ -300,14 +300,12 @@ input:checked + label:after {
 
   .location {
     margin: 0;
-    margin-top: .3rem;
-    margin-left: -8rem;
   }
 
   .location__title {
     margin: 0;
     position: absolute;
-    top: 1.2rem;
+    top: 2rem;
     left: 1rem;
     font-size: 1.2rem;
   }
@@ -315,7 +313,7 @@ input:checked + label:after {
   .location__date {
     margin: 0;
     position: absolute;
-    top: 2.7rem;
+    top: 3.5rem;
     left: 3rem;
     font-size: 1rem;
   }
@@ -324,7 +322,7 @@ input:checked + label:after {
     margin: 0;
     width: 2.2rem;
     position: absolute;
-    top: 1.3rem;
+    top: 2rem;
     right: 4rem;
     border-radius: 30%;
     z-index: 100;
@@ -333,7 +331,7 @@ input:checked + label:after {
   .menu__mobile {
     display: flex;
     position: absolute;
-    top: 1.3rem;
+    top: 2rem;
     right: 1rem;
     z-index: 100;
   }
@@ -378,6 +376,10 @@ input:checked + label:after {
     font-size: 1rem;
   }
 
+  .weather {
+    margin-top: 4.5rem;
+  }
+
   .weather__temp {
     margin-top: -3rem;
     font-size: 2.3rem;
@@ -398,8 +400,8 @@ input:checked + label:after {
 
   .toggle__switch {
     margin: 0;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
     width: 7rem;
     height: 2.2rem;
     position: relative;
