@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-const BarWeather = ({ weather, temp, isCelsius }) => {
+const BarWeather = ({ weather, temp, isCelsius, menuMobile }) => {
   const [degrees, setDegrees] = useState("");
 
   useEffect(() => {
     setDegrees(weather?.wind.deg);
-    
+
     // Conversion de grados cardinales a rosa de los vientos(North, South, East, West)
     if (degrees >= 0 && degrees < 25) {
       setDegrees("N");
@@ -31,6 +31,7 @@ const BarWeather = ({ weather, temp, isCelsius }) => {
   return (
     <div className="bar">
       <article className="card">
+        <i className="fa-solid fa-xmark" onClick={menuMobile}></i>
         <h5 className="card__title feels__title">Apparent temperature</h5>
         <h3 className="card__icon feels__icon">
           <i className="fa-solid fa-temperature-half"></i>
@@ -57,7 +58,8 @@ const BarWeather = ({ weather, temp, isCelsius }) => {
           <i className="fa-solid fa-location-arrow"></i>
         </h3>
         <h4 className="wind__speed">
-          <span className="card__span">{weather?.wind.speed.toFixed(1)}</span> m/s
+          <span className="card__span">{weather?.wind.speed.toFixed(1)}</span>{" "}
+          m/s
         </h4>
         <h4 className="wind__direction">
           <span className="card__span">{degrees}</span>&#176;

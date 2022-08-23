@@ -104,7 +104,7 @@ function App() {
     }
   };
 
-  console.log(weather?.main);
+  // console.log(weather?.main);
 
   //Convertir Kelvins a Celsius y Farenheit
   const tempCelsius = weather?.main.temp - 273.15;
@@ -123,6 +123,15 @@ function App() {
     farenheitMin: Math.floor(tempFarenheit),
   };
 
+  const menuMobile = () => {
+    let barMobile = document.querySelector(".bar");
+    if (barMobile.style.display === "flex") {
+      barMobile.style.display = "none";
+    } else {
+      barMobile.style.display = "flex";
+    }
+  };
+
   if (isLoading) {
     return <LoadingScreen />;
   } else {
@@ -134,8 +143,14 @@ function App() {
           date={date}
           isCelsius={isCelsius}
           setIsCelsius={setIsCelsius}
+          menuMobile={menuMobile}
         />
-        <BarWeather weather={weather} temp={temp} isCelsius={isCelsius} />
+        <BarWeather
+          weather={weather}
+          temp={temp}
+          isCelsius={isCelsius}
+          menuMobile={menuMobile}
+        />
       </div>
     );
   }

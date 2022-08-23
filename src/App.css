@@ -14,11 +14,12 @@
   background-size: 45rem 22rem;
   background-position: 0rem 6rem;
   opacity: 0.3;
+  animation: bgnMove 100s linear infinite;
 }
 
 .App {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -52,11 +53,21 @@
   font-weight: 200;
 }
 
+.menu__mobile {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 30%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #3f3f3f34;
+  cursor: pointer;
+}
+
 .weather {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 1.5rem;
 }
 
 .weather__img {
@@ -112,7 +123,7 @@
   align-items: center;
   border: none;
   border-radius: 50%;
-  background-color: #3f3f3f2c;
+  background-color: #3f3f3f34;
   cursor: pointer;
   z-index: 10;
 }
@@ -156,7 +167,6 @@ input[type="checkbox"] {
 }
 
 label {
-  cursor: pointer;
   text-indent: -9999px;
   width: 50px;
   height: 30px;
@@ -164,6 +174,7 @@ label {
   display: block;
   border-radius: 100px;
   position: relative;
+  cursor: pointer;
 }
 
 label:after {
@@ -172,7 +183,7 @@ label:after {
   top: 5px;
   left: 5px;
   width: 20px;
-  aspect-ratio: 1;
+  height: 15px;
   background: #fff;
   border-radius: 90px;
   transition: 0.3s;
@@ -188,7 +199,7 @@ input:checked + label:after {
 }
 
 .info__title {
-  margin-top: 8rem;
+  /* margin-top: 8rem; */
   font-size: 4rem;
   font-weight: 600;
 }
@@ -202,7 +213,7 @@ input:checked + label:after {
   margin: 0 auto 2rem;
   width: 55vw;
   height: 10rem;
-  display: flex;
+  display: none;
   justify-content: space-evenly;
   color: #f2f2f2;
   background-color: #3f3f3f81;
@@ -239,6 +250,7 @@ input:checked + label:after {
   position: absolute;
   top: 37rem;
   left: 47vw;
+  display: none;
   font-size: .9rem;
   font-weight: 200;
   background-color: #3f3f3f31;
@@ -263,11 +275,319 @@ input:checked + label:after {
   animation: spin 1s linear infinite;
 }
 
+/* MEDIAQUERIES (Width: 320px) */
+@media screen and (max-width: 1024px) {
+
+  .App {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .App::before {
+    background-size: 25rem;
+    background-position: 0rem 3rem;
+    opacity: .2;
+    animation: bgnMove 100s linear infinite;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location {
+    margin: 0;
+    margin-top: .3rem;
+    margin-left: -8rem;
+  }
+
+  .location__title {
+    margin: 0;
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .location__date {
+    margin: 0;
+    position: absolute;
+    top: 2.7rem;
+    left: 3rem;
+    font-size: 1rem;
+  }
+
+  .refresh__btn {
+    margin: 0;
+    width: 2.2rem;
+    position: absolute;
+    top: 1.3rem;
+    right: 4rem;
+    border-radius: 30%;
+    z-index: 100;
+  }
+  
+  .menu__mobile {
+    display: flex;
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    z-index: 100;
+  }
+
+  .bar {
+    margin: 0;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #3f3f3fc2;
+  }
+
+  .fa-xmark {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: .5rem;
+    left: .3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #3f3f3f6c;
+  }
+
+  .card__title {
+    font-size: .9rem;
+  }
+
+  .card__icon {
+    font-size: 1.2rem;
+  }
+
+  .card__span {
+    font-size: 1rem;
+  }
+
+  .weather__temp {
+    margin-top: -3rem;
+    font-size: 2.3rem;
+  }
+
+  .weather__temp span {
+    font-size: 4.5rem;
+  }
+
+  .weather__maxmin {
+    width: 8.5rem;
+    justify-content: space-evenly;
+  }
+
+  .weather__maxmin span{
+    font-size: 1.2rem;
+  }
+
+  .toggle__switch {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    width: 7rem;
+    height: 2.2rem;
+    position: relative;
+    top: -.5rem;
+    left: 14%;
+    z-index: 100;
+  }
+
+  .toggle {
+    font-size: 1.1rem;
+  }
+
+  label {
+    width: 3rem;
+    height: 1.5rem;
+  }
+
+  label::after {
+    width: 1rem;
+  }
+
+  .info__title {
+    margin-left: -2rem;
+    font-size: 2.3rem;
+  }
+
+  .info__subtitle {
+    margin-left: 2rem;
+    font-size: 1.1rem;
+  }
+}
+/* MEDIAQUERIES (Width: 375px) */
+@media screen and (min-width: 375px) {
+
+  .bar {
+    width: 40vw;
+  }
+
+  .fa-xmark {
+    font-size: 1.2rem;
+  }
+}
+/* MEDIAQUERIES (Width: 425px) */
+@media screen and (min-width: 425px) {
+
+  .bar {
+    width: 45vw;
+    align-items: center;
+  }
+
+  .fa-xmark {
+    font-size: 1.2rem;
+  }
+}
+/* MEDIAQUERIES (Width: 560px) */
+@media screen and (min-width: 560px) {
+
+  .App::before {
+    background-size: 28rem;
+  }
+
+  .bar {
+    width: 38vw;
+  }
+
+  .fa-xmark {
+    font-size: 1.2rem;
+  }
+}
+/* MEDIAQUERIES (Width: 768px) */
+@media screen and (min-width: 768px) {
+
+  .App::before {
+    background-size: 30rem;
+  }
+  
+  .location__title {
+    font-size: 1.8rem;
+    left: 4rem;
+  }
+
+  .location__date {
+    font-size: 1.3rem;
+    top: 3.3rem;
+    left: 8.5rem;
+  }
+
+  .refresh__btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    right: 8rem;
+  }
+
+  .menu__mobile {
+    width: 2.5rem;
+    height: 2.5rem;
+    right: 4rem;
+  }
+
+  .bar {
+    width: 30vw;
+    align-items: center;
+  }
+
+  .fa-xmark {
+    left: .6rem;
+    font-size: 1.8rem;
+  }
+
+  .card__title {
+    font-size: 1rem;
+  }
+
+  .card__icon {
+    font-size: 1.5rem;
+  }
+
+  .card__span {
+    font-size: 1rem;
+  }
+
+  .weather__temp span {
+    font-size: 7rem;
+  }
+
+  .weather__maxmin {
+    width: 12rem;
+  }
+
+  .weather__maxmin span {
+    font-size: 2rem;
+  }
+
+  .toggle__switch {
+    width: 8rem;
+    height: 2.5rem;
+    left: 27.5%;
+  }
+
+  .toggle {
+    font-size: 1.5rem;
+  }
+
+  .info__title {
+    font-size: 4rem;
+  }
+
+  .info__subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  
+  .App::before {
+    background-size: 35rem;
+  }
+
+  .menu__mobile {
+    display: none;
+  }
+
+  .bar {
+    display: flex;
+  }
+
+  .fa-xmark {
+    display: none;
+  }
+}
+
+/* ANIMATIONS */
+/* Loading spin */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+/* Background clouds */
+@keyframes bgnMove {
+  0% {
+    background-position: 0rem 0rem;
+  }
+
+  100% {
+    background-position: 30rem 0rem;
   }
 }
