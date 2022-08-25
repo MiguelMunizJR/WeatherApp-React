@@ -14,7 +14,7 @@
   background-size: 45rem 22rem;
   background-position: 0rem 6rem;
   opacity: 0.2;
-  animation: bgnMove 100s linear infinite;
+  animation: bgnMove 200s linear infinite;
 }
 
 .App {
@@ -586,7 +586,12 @@ input:checked + label:after {
     font-size: 1.5rem;
   }
 
+  .info {
+    margin-left: -1rem;
+  }
+
   .info__title {
+    margin-top: 4rem;
     font-size: 4rem;
   }
 
@@ -598,7 +603,7 @@ input:checked + label:after {
 @media screen and (min-width: 1025px) {
 
   .App::before {
-    background-size: 40rem;
+    background-size: 50rem;
   }
 
   .weather {
