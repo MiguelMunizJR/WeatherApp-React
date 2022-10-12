@@ -210,12 +210,10 @@ input:checked + label:after {
 }
 
 .bar {
-  width: 200px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: -200px;
-  display: flex;
+  margin: 0 auto 2rem;
+  width: 60vw;
+  height: 10rem;
+  display: none;
   justify-content: space-evenly;
   color: #f2f2f2;
   background-color: #3f3f3f81;
@@ -334,11 +332,12 @@ input:checked + label:after {
     height: 100vh;
     position: fixed;
     top: 0;
-    right: -400px;
-    border-radius: 0;
+    right: -300px;
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
     background-color: #3f3f3fa8;
+    border-radius: 0;
     transition: all 0.4s;
   }
 
@@ -631,7 +630,7 @@ input:checked + label:after {
   }
 
   .bar {
-    display: none;
+    display: flex;
   }
 
   .fa-xmark {
