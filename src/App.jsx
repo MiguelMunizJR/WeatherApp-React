@@ -124,12 +124,10 @@ function App() {
   };
 
   const menuMobile = () => {
-    let barMobile = document.querySelector(".bar");
-    if (barMobile.style.display === "flex") {
-      barMobile.style.display = "none";
-    } else {
-      barMobile.style.display = "flex";
-    }
+    const sidebar = document.querySelector(".bar").classList;
+    const toggle = document.querySelector(".menu__mobile").classList;
+    sidebar.toggle('active');
+    toggle.toggle('active');
   };
 
   if (isLoading) {

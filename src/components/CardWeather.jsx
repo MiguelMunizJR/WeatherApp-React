@@ -6,6 +6,7 @@ const CardWeather = ({
   setIsCelsius,
   menuMobile,
 }) => {
+  
   const toggleTemp = () => {
     setIsCelsius(!isCelsius);
   };

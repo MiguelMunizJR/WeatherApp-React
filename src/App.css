@@ -210,10 +210,12 @@ input:checked + label:after {
 }
 
 .bar {
-  margin: 0 auto 2rem;
-  width: 60vw;
-  height: 10rem;
-  display: none;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  display: flex;
   justify-content: space-evenly;
   color: #f2f2f2;
   background-color: #3f3f3f81;
@@ -322,17 +324,36 @@ input:checked + label:after {
     z-index: 100;
   }
 
+  .menu__mobile.active {
+    display: none;
+  }
+
   .bar {
     margin: 0;
-    width: 50vw;
+    width: 300px;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
+    right: -400px;
     border-radius: 0;
     flex-direction: column;
     align-items: flex-end;
     background-color: #3f3f3fa8;
+    transition: all .4s;
+  }
+
+  .bar.active {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    color: #f2f2f2;
+    background-color: #3f3f3f81;
+    z-index: 100;
+    transition: all .6s;
   }
 
   .fa-xmark {
@@ -510,9 +531,6 @@ input:checked + label:after {
     background-size: 25rem;
   }
 
-  .bar {
-    width: 50vw;
-  }
 
   .fa-xmark {
     font-size: 1.2rem;
@@ -612,10 +630,6 @@ input:checked + label:after {
 
   .menu__mobile {
     display: none;
-  }
-
-  .bar {
-    display: flex;
   }
 
   .fa-xmark {
